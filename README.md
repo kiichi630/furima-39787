@@ -22,7 +22,7 @@ has_many: purchase_records
 | Colum            | Type       | Options                        |
 | ---------------- | ---------- | ------------------------------ |
 | product          | string     | null: false                    |
-| text             | text       | null: false                    |
+| description      | text       | null: false                    |
 | condition_id     | integer    | null: false                    |
 | category_id      | integer    | null: false                    |
 | shipping_cost_id | integer    | null: false                    |
@@ -39,18 +39,18 @@ has_one: purchase_record
 
 ## Commentsテーブル
 
-| Colum | Type       | Options                        |
-| ----- | ---------- | ------------------------------ | 
-| text  | text       | null: false                    |
-| user  | references | null: false, foreign_key: true |
-| item  | references | null: false, foreign_key: true |
+| Colum       | Type       | Options                        |
+| ----------- | ---------- | ------------------------------ | 
+| description | text       | null: false                    |
+| user        | references | null: false, foreign_key: true |
+| item        | references | null: false, foreign_key: true |
 
 ### Association
 
 belongs_to: user
 belongs_to: item
 
-## Addressテーブル
+## Addressesテーブル
 
 | Colum            | Type        | Options                        |
 | ---------------- | ----------- | ------------------------------ |
