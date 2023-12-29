@@ -1,6 +1,8 @@
 class ItemsController < ApplicationController
+  before_action :authenticate_user!
 
-  def item_params
-    params.require(:item).permit(:content, :image).merge(user_id: current_user.id)
+  def new
+    @item = Item.new
   end
+
 end
