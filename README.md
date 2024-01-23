@@ -15,7 +15,7 @@
 
 has_many: items
 has_many: comments
-has_many: purchase_records
+has_many: orders
 
 ## Itemsテーブル
 
@@ -35,7 +35,7 @@ has_many: purchase_records
 
 belongs_to: user
 has_many: comments
-has_one: purchase_record
+has_one: order
 
 ## Commentsテーブル
 
