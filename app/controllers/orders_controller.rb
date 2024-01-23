@@ -7,6 +7,8 @@ class OrdersController < ApplicationController
     @item = Item.find(params[:item_id])
     if user_signed_in? && current_user.id == @item.user_id
       redirect_to root_path
+    elsif @item.order.present?
+      redirect_to root_path
     end
   end
 
