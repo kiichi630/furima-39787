@@ -10,6 +10,10 @@ RSpec.describe OrderForm, type: :model do
       it 'すべての値が正しく入力されていれば保存できる' do
         expect(@order_form).to be_valid
       end
+      it '建物名が空でも登録できる' do
+        @order_form.building_name = ''
+        expect(@order_form).to be_valid
+      end
     end
     context '配送先情報が保存できないとき' do
       it 'user_idが空では保存できない' do
